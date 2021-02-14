@@ -23,34 +23,10 @@
             <div class="card" style="width:100%;">
                 <div class="card-header" style="background-color:#2459ad;color: white;">
                     Histori
-                    <button class="float-right btn btn-info "><i class="fas fa-plus"></i></button>
+                    <button class="float-right btn btn-info btn-sm"><i class="fas fa-plus"></i> &nbsp;View All</button>
                 </div>
                 <div class="card-body d-flex justify-content-center" style="overflow-x:auto;">
-                    <table>
-                        <thead>
-                            <tr>
-                                @foreach($post_data_statistik as $pds)
-                                <td>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card" style="height:250px; width:300px;">
-                                                <div class="card-header text-center">
-                                                    <p><b>{{$pds->title}}</b></p> 
-                                                </div>
-                                                <div class="card-body">
-                                                    <small>{{$pds->description}}</small>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <a href="" class="btn btn-primary btn-sm float-right"><small>View All</small></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                @endforeach
-                            </tr>
-                        </thead>
-                    </table>
+                    
                 </div>
             </div>
         </div>
@@ -59,34 +35,10 @@
             <div class="card" style="width:100%;">
                 <div class="card-header" style="background-color:#2459ad;color: white;">
                     Regulasi
-                    <button class="float-right btn btn-info "><i class="fas fa-plus"></i></button>
+                    <button class="float-right btn btn-info btn-sm"><i class="fas fa-plus"></i> &nbsp;View All</button>
                 </div>
                 <div class="card-body d-flex justify-content-center" style="overflow-x:auto;">
-                    <table>
-                        <thead>
-                            <tr>
-                                @foreach($post_data_statistik as $pds)
-                                <td>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card" style="height:250px; width:300px;">
-                                                <div class="card-header text-center">
-                                                    <p><b>{{$pds->title}}</b></p> 
-                                                </div>
-                                                <div class="card-body">
-                                                    <small>{{$pds->description}}</small>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <a href="" class="btn btn-primary btn-sm float-right"><small>View All</small></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                @endforeach
-                            </tr>
-                        </thead>
-                    </table>
+                   
                 </div>
             </div>
         </div>
@@ -95,34 +47,10 @@
             <div class="card" style="width:100%;">
                 <div class="card-header" style="background-color:#2459ad;color: white;">
                     Artikel
-                    <button class="float-right btn btn-info "><i class="fas fa-plus"></i></button>
+                    <button class="float-right btn btn-info btn-sm"><i class="fas fa-plus"></i> &nbsp;View All</button>
                 </div>
                 <div class="card-body d-flex justify-content-center" style="overflow-x:auto;">
-                    <table>
-                        <thead>
-                            <tr>
-                                @foreach($post_data_statistik as $pds)
-                                <td>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card" style="height:250px; width:300px;">
-                                                <div class="card-header text-center">
-                                                    <p><b>{{$pds->title}}</b></p> 
-                                                </div>
-                                                <div class="card-body">
-                                                    <small>{{$pds->description}}</small>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <a href="" class="btn btn-primary btn-sm float-right"><small>View All</small></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                @endforeach
-                            </tr>
-                        </thead>
-                    </table>
+                   
                 </div>
             </div>
         </div>
@@ -131,34 +59,10 @@
             <div class="card" style="width:100%;">
                 <div class="card-header" style="background-color:#2459ad;color: white;">
                     Berita
-                    <button class="float-right btn btn-info "><i class="fas fa-plus"></i></button>
+                    <button class="float-right btn btn-info btn-sm"><i class="fas fa-plus"></i> &nbsp;View All</button>
                 </div>
                 <div class="card-body d-flex justify-content-center" style="overflow-x:auto;">
-                    <table>
-                        <thead>
-                            <tr>
-                                @foreach($post_data_statistik as $pds)
-                                <td>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card" style="height:250px; width:300px;">
-                                                <div class="card-header text-center">
-                                                    <p><b>{{$pds->title}}</b></p> 
-                                                </div>
-                                                <div class="card-body">
-                                                    <small>{{$pds->description}}</small>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <a href="" class="btn btn-primary btn-sm float-right"><small>View All</small></a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </td>
-                                @endforeach
-                            </tr>
-                        </thead>
-                    </table>
+                    
                 </div>
             </div>
         </div>
@@ -167,7 +71,7 @@
             <div class="card" style="width:100%;">
                 <div class="card-header" style="background-color:#2459ad;color: white;overflow-x:auto;">
                     Data Statistik
-                    <button class="float-right btn btn-info "><i class="fas fa-plus"></i></button>
+                    <button class="float-right btn btn-info btn-sm"><i class="fas fa-plus"></i> &nbsp;View All</button>
                 </div>
                 <div class="card-body d-flex justify-content-center" style="overflow-x:auto;">
                     <table>
@@ -185,7 +89,7 @@
                                                     <small>{{$pds->description}}</small>
                                                 </div>
                                                 <div class="card-footer">
-                                                    <a href="" class="btn btn-primary btn-sm float-right"><small>View All</small></a>
+                                                    <a target="_blank" href="{{ url ('storage/'.$pds->file) }}" class="btn btn-primary btn-sm float-right"><small>View</small></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -200,4 +104,5 @@
         </div>
 
     </div>
+    <br><br>
 </div>

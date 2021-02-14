@@ -13,7 +13,7 @@
                     <div class="row">
                         <?php
                             $visi = $visi_misi->visi;
-                            $visi_explode = (explode("-",$visi));
+                            $visi_explode = (explode(";",$visi));
                         ?>
                         <div class="col-md-6">
                             <div class="card">
@@ -29,7 +29,7 @@
                         </div>
                         <?php
                             $misi = $visi_misi->misi;
-                            $misi_explode = (explode(".",$misi));
+                            $misi_explode = (explode(";",$misi));
                         ?>
                         <div class="col-md-6">
                             <div class="card">

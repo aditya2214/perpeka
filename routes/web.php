@@ -27,4 +27,7 @@ Route::get('/visi_misi', 'HomeController@visi_misi');
 Route::get('/data_statistik', 'HomeController@data_statistik');
 
 Route::get('/perpeka_visi_misi', 'ClientController@perpeka_visi_misi');
+Route::get('/perpeka_struktur_organisasi', 'ClientController@perpeka_struktur_organisasi');
+Route::get('/perpeka_kontak', 'ClientController@perpeka_kontak');
+Route::get('/perpeka_foto', 'ClientController@perpeka_foto');
 

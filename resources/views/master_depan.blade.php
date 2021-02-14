@@ -13,6 +13,8 @@
 @livewireStyles
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
+<link href="depan/album/album.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -22,31 +24,29 @@
         <div class="shell">
             <h1 id="logo" class="left">
                 <a href="{{ url ('/') }}">
-                    <img src="{{ asset ('logo/logo.jpeg') }}" style="width:50px;" alt=""> PERPEKA<span style="position:relative;left:58px; top:-15px;">PERKUMPULAN PENGUSAHA ELEKTRONIK DAN KOMPONEN KARAWANG</span>
+                    <img src="{{ asset ('logo/logo.jpeg') }}" style="width:50px;" alt=""> PERPEKA<span style="position:relative;left:58px; top:-15px; color:black"><b>PERKUMPULAN PENGUSAHA ELEKTRONIK DAN KOMPONEN KARAWANG</b> </span>
                 </a>
             </h1>
         <div class="socials right">
             <ul>
-            <li><a href="{{ url ('login') }}" style="color:black"><i class="fas fa-sign-in-alt"></i>&nbsp;Login</a></li>
             </ul>
         </div>
         </div>
     </div>
     <br>
-    <div class="nav-holder">
-        <div class="shell" style="width:100% text-align:center; " >
+    <div class="nav-holder" >
+        <div class="shell" style="width:100% text-align:center;  " >
         <div id="navigation" class="left">
             <ul>
-            <li><a href="#" style="font-size:12px;">HISTORI</a></li>
-            <li><a href="{{ url ('perpeka_visi_misi') }}" style="font-size:12px;">VISI/MISI</a></li>
-            <li><a href="#" style="font-size:12px;">STRUKTUR ORGANISASI</a></li>
-            <li><a href="#" style="font-size:12px;">KONTAK</a></li>
-            <li><a href="#" style="font-size:12px;">REGULASI</a></li>
-            <li><a href="#" style="font-size:12px;">ARTIKEL</a></li>
-            <li><a href="#" style="font-size:12px;">FOTO</a></li>
-            <li><a href="#" style="font-size:12px;">BERITA</a></li>
-            <li><a href="#data_statistik" style="font-size:12px;">DATA STATISTIK</a></li>
-
+                <li><a href="#" style="font-size:12px;">HISTORI</a></li>
+                <li><a href="{{ url ('perpeka_visi_misi') }}" style="font-size:12px;">VISI/MISI</a></li>
+                <li><a href="{{ url ('perpeka_struktur_organisasi') }}" style="font-size:12px;">STRUKTUR ORGANISASI</a></li>
+                <li><a href="{{ url ('perpeka_kontak') }}" style="font-size:12px;">KONTAK</a></li>
+                <li><a href="#" style="font-size:12px;">REGULASI</a></li>
+                <li><a href="#" style="font-size:12px;">ARTIKEL</a></li>
+                <li><a href="{{ url ('perpeka_foto') }}" style="font-size:12px;">FOTO</a></li>
+                <li><a href="#" style="font-size:12px;">BERITA</a></li>
+                <li><a href="#data_statistik" style="font-size:12px;">DATA STATISTIK</a></li>
             </ul>
         </div>
         <!-- <div class="search right">
@@ -63,7 +63,7 @@
 
     <div class="footer fixed-bottom">
     <div class="shell">
-        <p class="rf text-left">Design by <a href="https://www.myprofil261097.epizy.com/" target="_blank">Developer Perpeka</a></p>
+        <p class="rf text-left"><a href="{{ url ('login') }}" style="color:white"><i class="fas fa-sign-in-alt"></i>&nbsp;Login</a>&nbsp;&nbsp;&nbsp; Design by <a href="https://www.myprofil261097.epizy.com/" target="_blank">Developer Perpeka</a></p>
         <div style="clear:both;"></div>
     </div>
     </div>
