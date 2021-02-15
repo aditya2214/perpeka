@@ -8,7 +8,8 @@ use DB;
 class UploadFoto extends Component
 {
     use WithFileUploads;
-    public $img=[];
+    public $img;
+    public $desc;
 
     public function render()
     {
@@ -23,17 +24,16 @@ class UploadFoto extends Component
             'img.*' => 'image|max:1024', // 1MB Max
         ]);
 
-        foreach ($this->img as $imgs) {
-            $img = $imgs->store('img','public');
+            $imgs = $this->img->store('img','public');
             $upload_foto = DB::table('post')->insert([
                 'title'=>'null',
                 'kategori'=>1,
-                'description'=>'null',
-                'img'=>$img,
+                'description'=>$this->desc,
+                'img'=>$imgs,
                 ]);
-            }
 
         $this->img = null;
+        $this->desc = null;
 
         session()->flash('success', 'Post successfully saved.');
     }

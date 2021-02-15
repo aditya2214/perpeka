@@ -35,14 +35,14 @@
     <!-- <script src="https://cdn.ckeditor.com/4.16.0/standard/ckeditor.js"></script> -->
     @livewireStyles
   </head>
-  <body >
-    <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow fixed-top">
+  <body>
+    <nav class="navbar navbar-dark sticky-top bg-info flex-md-nowrap p-0 shadow fixed-top">
       <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3 " href="#">Admin Penel</a>
         <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
-        <li class="nav-item text-nowrap">
-            <a class="nav-link" style="color:white;position:relative;top:-10px;" href="{{ route('logout') }}"
+        <div class="nav-item text-nowrap ">
+            <a class="nav-link" style="color:white;" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                 <span data-feather="arrow-right-circle"></span>
@@ -52,7 +52,7 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
             </form>    
-          </li>
+        </div>
     </nav>
 
 <div class="container-fluid">

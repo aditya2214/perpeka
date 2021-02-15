@@ -30,4 +30,5 @@ Route::get('/perpeka_visi_misi', 'ClientController@perpeka_visi_misi');
 Route::get('/perpeka_struktur_organisasi', 'ClientController@perpeka_struktur_organisasi');
 Route::get('/perpeka_kontak', 'ClientController@perpeka_kontak');
 Route::get('/perpeka_foto', 'ClientController@perpeka_foto');
+Route::get('/perpeka_data_statistik', 'ClientController@perpeka_data_statistik');
 

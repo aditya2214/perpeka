@@ -20,6 +20,19 @@
         </div>
         <br>
         <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div>
+                            <h4>Papan Informasi</h4>
+                        </div>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam numquam, expedita nihil, nam ipsam velit vel laudantium provident temporibus, ut fuga reiciendis at odit adipisci blanditiis! Voluptas corrupti fuga cumque?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
             <div class="card" style="width:100%;">
                 <div class="card-header" style="background-color:#2459ad;color: white;">
                     Histori
@@ -69,35 +82,26 @@
     
         <div class="row">
             <div class="card" style="width:100%;">
-                <div class="card-header" style="background-color:#2459ad;color: white;overflow-x:auto;">
+                <div class="card-header" style="background-color:#2459ad;color: white;">
                     Data Statistik
-                    <button class="float-right btn btn-info btn-sm"><i class="fas fa-plus"></i> &nbsp;View All</button>
+                    <a href="{{ url ('perpeka_data_statistik') }}" class="float-right btn btn-info btn-sm"><i class="fas fa-plus"></i> &nbsp;View All</a>
                 </div>
                 <div class="card-body d-flex justify-content-center" style="overflow-x:auto;">
                     <table>
-                        <thead>
                             <tr>
                                 @foreach($post_data_statistik as $pds)
                                 <td>
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="card" style="height:250px; width:300px;">
-                                                <div class="card-header text-center">
-                                                    <p><b>{{$pds->title}}</b></p> 
-                                                </div>
-                                                <div class="card-body">
-                                                    <small>{{$pds->description}}</small>
-                                                </div>
-                                                <div class="card-footer">
-                                                    <a target="_blank" href="{{ url ('storage/'.$pds->file) }}" class="btn btn-primary btn-sm float-right"><small>View</small></a>
-                                                </div>
-                                            </div>
+                                        <!-- background-image: url('{{ url ('storage/'.$pds->img) }}'); -->
+                                    <div class="card" style="height:200px; width:300px; border:2px solid;">
+                                        <div class="card-body text-info">
+                                            <h3><b>{{$pds->title}}</b></h3> 
+                                            <small><b>{{$pds->description}}</b></small><br>
+                                            <small>Tanggal Upload : {{date('d-M-Y', strtotime($pds->created_at))}}</small><a target="_blank" href="{{ url ('storage/'.$pds->file) }}" class="btn btn-primary btn-sm float-right"><small>View</small></a>
                                         </div>
                                     </div>
                                 </td>
                                 @endforeach
                             </tr>
-                        </thead>
                     </table>
                 </div>
             </div>

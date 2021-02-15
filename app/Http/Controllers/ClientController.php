@@ -27,9 +27,12 @@ class ClientController extends Controller
     }
 
     public function perpeka_foto(){
-        $foto = DB::table('post')->where('kategori',1)->orderBy('created_at','DESC')->get();
 
-        return view('perpeka_foto',compact('foto'));
+        return view('perpeka_foto');
     }
 
+    public function perpeka_data_statistik(){
+
+        return view('perpeka_data_statistik');
+    }
 }

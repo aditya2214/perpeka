@@ -14,15 +14,15 @@
             </button>
             </div>
             @endif
-            <div class="card bg-warning">
+            <div class="card bg-info">
                 <div class="card-body">
-                    <form wire:submit.prevent="upload_foto">
-                        <input wire:model="img" type="file" accept="image/*" class="" style="border-radius:10px;" multiple>
+                    <form  wire:submit.prevent="upload_foto">
+                        <input wire:model="img" type="file" accept="image/*" class="" style="border-radius:10px; border:1px solid;" multiple>
 
 
                         @error('img.*') <span class="error">{{ $message }}</span> @enderror
                         <br><br>
-                        <button class="btn btn-success btn-sm">Upload</button>
+                        <button style="border-radius:10px; border:1px solid;" class="btn btn-success btn-sm">Upload</button>
                     </form>
                 </div>
             </div>

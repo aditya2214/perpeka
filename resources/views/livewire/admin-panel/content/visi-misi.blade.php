@@ -8,7 +8,7 @@
     @else
     <div class="row">
         <div class="col">
-            <div class="card bg-warning">
+            <div class="card bg-info">
                 <div class="card-body ">  
                     <div class="row">
                         <?php
@@ -44,7 +44,7 @@
                     </div>
                     <div class="btn-group" role="group" aria-label="Basic example">
                         <button wire:click="delete_visi_misi({{$visi_misi->id}})" type="button" class="btn btn-danger">Hapus</button>
-                        <button wire:click="updated_visi_misi({{$visi_misi->id}})" type="button" class="btn btn-info">Edit</button>
+                        <button wire:click="updated_visi_misi({{$visi_misi->id}})" type="button" class="btn btn-warning">Edit</button>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
     <form wire:submit.prevent="updatedVisiMisi">
         <div class="row">
             <div class="col-md-2 offset-md-5">
-                <button class="btn btn-primary form-control"><i class="fas fa-arrow-up"></i>&nbsp;Upload</button>
+                <button class="btn btn-info form-control"><i class="fas fa-arrow-up"></i>&nbsp;Upload</button>
             </div>
         </div>
         <br>
@@ -83,7 +83,7 @@
     <form wire:submit.prevent="storeVisiMisi">
         <div class="row">
             <div class="col-md-2 offset-md-5">
-                <button class="btn btn-primary form-control"><i class="fas fa-arrow-up"></i>&nbsp;Upload</button>
+                <button class="btn btn-info form-control"><i class="fas fa-arrow-up"></i>&nbsp;Upload</button>
             </div>
         </div>
         <br>

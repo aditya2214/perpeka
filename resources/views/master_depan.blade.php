@@ -46,7 +46,7 @@
                 <li><a href="#" style="font-size:12px;">ARTIKEL</a></li>
                 <li><a href="{{ url ('perpeka_foto') }}" style="font-size:12px;">FOTO</a></li>
                 <li><a href="#" style="font-size:12px;">BERITA</a></li>
-                <li><a href="#data_statistik" style="font-size:12px;">DATA STATISTIK</a></li>
+                <li><a href="{{ url ('perpeka_data_statistik') }}" style="font-size:12px;">DATA STATISTIK</a></li>
             </ul>
         </div>
         <!-- <div class="search right">

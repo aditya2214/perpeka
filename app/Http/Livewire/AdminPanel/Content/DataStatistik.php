@@ -5,18 +5,20 @@ namespace App\Http\Livewire\AdminPanel\Content;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use DB;
+use Livewire\WithPagination;
 class DataStatistik extends Component
 {
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     use WithFileUploads;
     public $title;
     public $desc;
     public $file;
     public $pdf;
-    public $img;
     public function render()
     {
         return view('livewire.admin-panel.content.data-statistik',[
-            'PostDataStatistik'=>DB::table('post')->where('kategori',3)->get(),
+            'PostDataStatistik'=>DB::table('post')->where('kategori',3)->paginate(4),
             'pdf'=>$this->pdf
         ]);
     }
@@ -27,7 +29,6 @@ class DataStatistik extends Component
             'description'=>$this->desc,
             'file'=>$this->file->store('pdf','public'),
             'kategori'=>3,
-            'img'=>$this->img->store('img','public')
         ]);
 
         $this->title = null;
