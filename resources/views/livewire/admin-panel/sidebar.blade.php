@@ -41,7 +41,7 @@
         <li class="nav-item">
         <a class="nav-link" href="{{ url ('upload_foto') }}">
             <span data-feather="upload"></span>
-            Upload Foto
+            Upload Foto/video
         </a>
         </li>
           <li class="nav-item">

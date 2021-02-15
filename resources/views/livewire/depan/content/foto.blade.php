@@ -1,6 +1,13 @@
 <div>
         <div class="container-fluid" style="margin:20px;">
-            <h4>Album</h4>
+            <h4>Gallery</h4>
+            <div class="form-row">
+                <div class="col">
+                    <a href="{{url ('perpeka_foto') }}" class="btn btn-warning btn-sm">Images</a>
+                    <a href="{{ url ('perpeka_video') }}" class="btn btn-warning btn-sm">Videos</a>
+                </div>
+            </div>
+            <br>
             <div class="row">
             @foreach($foto as $f)
             <div class="col-md-4">

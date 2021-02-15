@@ -17,7 +17,7 @@ class Foto extends Component
     public function render()
     {
         return view('livewire.depan.content.foto',[
-            'foto' => DB::table('post')->where('kategori',1)->orderBy('created_at','DESC')->paginate(9)
+            'foto' => DB::table('post')->where('kategori',1)->where('media_select',0)->orderBy('created_at','DESC')->paginate(9)
         ]);
     }
 

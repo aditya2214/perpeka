@@ -31,6 +31,11 @@ class ClientController extends Controller
         return view('perpeka_foto');
     }
 
+    public function perpeka_video(){
+
+        return view('perpeka_video');
+    }
+
     public function perpeka_data_statistik(){
 
         return view('perpeka_data_statistik');
