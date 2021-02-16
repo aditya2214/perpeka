@@ -1,5 +1,5 @@
 <div>
-        <div class="container-fluid" style="margin:20px;">
+        <div class="container-fluid">
             <h4>Gallery</h4>
             <div class="form-row">
                 <div class="col">
@@ -8,18 +8,16 @@
                 </div>
             </div>
             <br>
-            <div class="row">
+            <div class="row bg-warning " style="border:1px solid;">
             @foreach($foto as $f)
-            <div class="col-md-4">
-                <div class="card">
+            <div class="col-md-6">
+                <div class="card"  style="margin-top:10px;margin-bottom:10px;">
                 <div class="card-body text-center" style="border:1px solid; border-radius:10px;">
-                    <img loading="lazy" src="{{ url ('storage/'.$f->img) }}" style="width:250px; height:300px;" alt="">
-                    <div style="text-align:center;">
-                        <small><b>{{$f->description}}</b></small><br>
-                    </div>
-                    <br>
-                    <div class="d-flex justify-content-between align-items-center">
+                    <img loading="lazy" src="{{ url ('storage/'.$f->img) }}" style="width:100%; height:400px;" alt="">
+                    
+                    <div class="text-center">
                         <small class="text-muted">Di Upload : {{$f->created_at}}</small>
+                        <h4>{{$f->description}}</h4>
                     </div>
                 </div>
                 </div>

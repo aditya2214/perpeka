@@ -3,14 +3,18 @@
     <h4 class="">Data Statistik</h4>
     <!-- <small>{{Request::url()}}</small> -->
     </div>
+
     <div class="row" style=" font-size:12px;">
+    @if($updated)
         <div class="col-md-6">
             <div class="card bg-info">
                 <div class="card-body">
-                    <form wire:submit.prevent="storePost">              
+                    <form wire:submit.prevent="updatedDataStatistik">              
                         <div class="form-group">
                             <label for="">Title Post</label>
+                            <input wire:model="id_ds" type="hidden" name="">
                             <input wire:model="title" type="text" class="form-control" style="border-radius:10px; border:1px solid;">
+
                         </div>
                         <div class="form-group">
                             <label for="">Description Post</label>
@@ -18,14 +22,45 @@
                         </div>
                         <div class="form-group">
 
-                            <label for="">File</label>
+                            <label for="">Ubah File</label>
                             <input wire:model="file" class="form-control" type="file" accept="application/pdf" id="" style="border-radius:10px; border:1px solid;">
+
                         </div>
                         <button class="btn btn-success btn-sm" style="border-radius:10px; border:1px solid;" >Upload</button>
                     </form>
                 </div>
             </div>
         </div>
+    @else
+        <div class="col-md-6">
+            <div class="card bg-info">
+                <div class="card-body">
+                    <form wire:submit.prevent="storePost">              
+                        <div class="form-group">
+                            <label for="">Title Post</label>
+                            <input wire:model="title" type="text" class="form-control" style="border-radius:10px; border:1px solid;">
+                            @error('title') <span class="error text-danger">{{ $message }}</span> @enderror
+
+                        </div>
+                        <div class="form-group">
+                            <label for="">Description Post</label>
+                            <textarea wire:model="desc" class="form-control" style="border-radius:10px; border:1px solid;"></textarea>
+                            @error('desc') <span class="error text-danger">{{ $message }}</span> @enderror
+
+                        </div>
+                        <div class="form-group">
+
+                            <label for="">File</label>
+                            <input wire:model="file" class="form-control" type="file" accept="application/pdf" id="" style="border-radius:10px; border:1px solid;">
+                            @error('file') <span class="error text-danger">{{ $message }}</span> @enderror
+
+                        </div>
+                        <button class="btn btn-success btn-sm" style="border-radius:10px; border:1px solid;" >Upload</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    @endif
         <div class="col-md-6" style="overflow-x:auto;">
             <table class="table table-bordered">
                 <thead>
@@ -43,7 +78,7 @@
                         <td>{{$pds->description}}</td>
                         <td><a class="btn" style="color:blue;" target="_blanks" href="{{ url ('storage/'.$pds->file ) }}" >View PDF</a></td>
                         <td>
-                            <button class="btn btn-warning btn-sm">Edit</button>
+                            <button wire:click="edit({{$pds->id}})" class="btn btn-warning btn-sm">Edit</button>
                             <button wire:click="deleteDataStatistik({{$pds->id}})" class="btn btn-danger btn-sm">Hapus</button>
                         </td>
                     </tr>

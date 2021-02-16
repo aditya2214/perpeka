@@ -26,9 +26,7 @@ class StrukturOrganisasi extends Component
         foreach ($this->img as $imgs) {
             $img = $imgs->store('img','public');
             $upload_foto = DB::table('post')->insert([
-                'title'=>'null',
                 'kategori'=>2,
-                'description'=>'null',
                 'img'=>$img,
                 ]);
             }

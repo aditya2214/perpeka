@@ -8,25 +8,23 @@
         </div>
     </div>
     <br>
-    <div class="row" style="overflow-x:auto;">
-        <table class="table table-bordered">
-            @foreach($video as $v)
-            <tr>
-                <td>
-                    <div class="card" style="margin:20px;">
-                        <div class="card-body">
-                            <p>{{$v->description}}</p>
-                            <video width="100%" height="100%" controls>
-                            <source src="{{ url ('storage/'.$v->img) }}" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                            Your browser does not support the video tag.
-                            </video>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            @endforeach
-        </table>
+    <div class="row bg-warning" style="overflow-x:auto; border:1px solid;">
+        @foreach($video as $v)
+        <div class="col-md-6">
+            <div class="card"  style="margin-top:10px;margin-bottom:10px;">
+                <div class="card-body" style="border:1px solid; border-radius:10px; text-align:center;">
+                    <video loading="lazy" style="width:100%; height:400px;" id="{{$v->id}}" controls>
+                    <source src="{{ url ('storage/'.$v->img ) }}" type="video/mp4">
+                    <source src="{{ url ('storage/'.$v->img ) }}" type="video/ogg">
+                    Your browser does not support the video tag.
+                    </video>
+                    <small>Di Upload Tgl : {{$v->created_at}}</small>
+                    <h4>{{$v->description}}</h4>
+                </div>
+            </div>
+        </div>
+        {{$video -> links() }}
+        @endforeach
     </div>
 </div>
 </div>

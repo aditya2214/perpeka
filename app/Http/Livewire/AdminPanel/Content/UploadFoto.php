@@ -5,33 +5,42 @@ namespace App\Http\Livewire\AdminPanel\Content;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 use DB;
+use Livewire\WithPagination;
 class UploadFoto extends Component
 {
     use WithFileUploads;
+    use WithPagination;
+    protected $paginationTheme = 'bootstrap';
     public $img;
     public $desc;
     public $media_select;
+    public $gallery = false;
+    public $query;
+    protected $queryString = ['query'];
 
     public function render()
     {
         return view('livewire.admin-panel.content.upload-foto',[
-            'imgs'=>DB::table('post')->where('kategori',1)->orderBy('created_at','DESC')->get()
+            'imgs'=>DB::table('post')->where('kategori',1)->where('media_select',0)->orderBy('created_at','DESC')->get(),
+            'videos'=>DB::table('post')->where('kategori',1)->where('media_select',1)->orderBy('created_at','DESC')->get(),
+
         ]);
 
     }
 
     public function upload_foto(){
-        try {
+        
             //code...
             if ($this->media_select == 0) {
                 # code...
                 $this->validate([
-                    'img' => 'image|max:1024',
+                    'desc' => 'required|min:5|max:100',
+                    'media_select' => 'required',
+                    'img' => 'required|image|max:1024',
                 ]);
             }
                 $imgs = $this->img->store('img','public');
                 $upload_foto = DB::table('post')->insert([
-                    'title'=>'null',
                     'kategori'=>1,
                     'description'=>$this->desc,
                     'img'=>$imgs,
@@ -42,13 +51,15 @@ class UploadFoto extends Component
             $this->desc = null;
     
             session()->flash('success', 'Post successfully saved.');
-        } catch (\Throwable $th) {
-            //throw $th;
-            session()->flash('error', 'Please Check Your Input.');
-        }
+        
     }
 
     public function delete_foto($id){
         DB::table('post')->where('id',$id)->delete();
+    }
+
+    public function open_gallery(){
+        $this->query = 'perpeka_media';
+        $this->gallery = true;
     }
 }
