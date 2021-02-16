@@ -21,8 +21,8 @@ class UploadFoto extends Component
     public function render()
     {
         return view('livewire.admin-panel.content.upload-foto',[
-            'imgs'=>DB::table('post')->where('kategori',1)->where('media_select',0)->orderBy('created_at','DESC')->get(),
-            'videos'=>DB::table('post')->where('kategori',1)->where('media_select',1)->orderBy('created_at','DESC')->get(),
+            'imgs'=>DB::table('gallery')->where('media_select',0)->orderBy('created_at','DESC')->get(),
+            'videos'=>DB::table('gallery')->where('media_select',1)->orderBy('created_at','DESC')->get(),
 
         ]);
 
@@ -40,10 +40,9 @@ class UploadFoto extends Component
                 ]);
             }
                 $imgs = $this->img->store('img','public');
-                $upload_foto = DB::table('post')->insert([
-                    'kategori'=>1,
+                $upload_foto = DB::table('gallery')->insert([
                     'description'=>$this->desc,
-                    'img'=>$imgs,
+                    'file'=>$imgs,
                     'media_select'=>$this->media_select
                     ]);
     
@@ -55,7 +54,7 @@ class UploadFoto extends Component
     }
 
     public function delete_foto($id){
-        DB::table('post')->where('id',$id)->delete();
+        DB::table('gallery')->where('id',$id)->delete();
     }
 
     public function open_gallery(){

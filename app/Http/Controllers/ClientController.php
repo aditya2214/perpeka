@@ -15,7 +15,7 @@ class ClientController extends Controller
     }
 
     public function perpeka_struktur_organisasi(){
-        $struktur_organisasi = DB::table('post')->where('kategori',2)->orderBy('created_at','DESC')->limit(1)->get();
+        $struktur_organisasi = DB::table('struktur_organisasi')->orderBy('created_at','DESC')->limit(1)->get();
 
 
         return view('perpeka_struktur_organisasi',compact('struktur_organisasi'));
@@ -39,5 +39,18 @@ class ClientController extends Controller
     public function perpeka_data_statistik(){
 
         return view('perpeka_data_statistik');
+    }
+
+    public function perpeka_artikel(){
+
+        return view('perpeka_artikel');
+    }
+    public function perpeka_berita(){
+
+        return view('perpeka_berita');
+    }
+    public function perpeka_regulasi(){
+
+        return view('perpeka_regulasi');
     }
 }

@@ -65,7 +65,7 @@
                             <div class="col-xs-1 ">
                                 <div class="card" style="margin:10px; width:160px;">
                                     <div class="card-body" style="border:1px solid; border-radius:10px;">
-                                        <img loading="lazy" src="{{ url ('storage/'.$img->img) }}" style="width:115px; height:115px;" alt="">
+                                        <img loading="lazy" src="{{ url ('storage/'.$img->file) }}" style="width:115px; height:115px;" alt="">
                                         <div style="text-align:center;">
                                             <small><b>{{$img->description}}</b></small><br>
                                             <button wire:click="delete_foto({{$img->id}})" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i>&nbsp;Hapus</button>
@@ -88,13 +88,13 @@
                     <td>
                         <div class="card" style="margin:10px;">
                             <div class="card-body" style="border:1px solid; border-radius:10px;">
-                                <button wire:click="delete_foto({{$video->id}})" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i>&nbsp;Hapus</button>
                                 <video loading="lazy" width="295" height="140" controls>
-                                <source src="{{ url ('storage/'.$video->img ) }}" type="video/mp4">
-                                <source src="{{ url ('storage/'.$video->img ) }}" type="video/ogg">
+                                <source src="{{ url ('storage/'.$video->file ) }}" type="video/mp4">
+                                <source src="{{ url ('storage/'.$video->file ) }}" type="video/ogg">
                                 Your browser does not support the video tag.
                                 </video>
                             </div>
+                            <button wire:click="delete_foto({{$video->id}})" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i>&nbsp;Hapus</button>
                         </div>
                     </td>
                 @endforeach

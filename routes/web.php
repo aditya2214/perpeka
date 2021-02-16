@@ -32,4 +32,7 @@ Route::get('/perpeka_kontak', 'ClientController@perpeka_kontak');
 Route::get('/perpeka_foto', 'ClientController@perpeka_foto');
 Route::get('/perpeka_video', 'ClientController@perpeka_video');
 Route::get('/perpeka_data_statistik', 'ClientController@perpeka_data_statistik');
+Route::get('/perpeka_artikel', 'ClientController@perpeka_artikel');
+Route::get('/perpeka_berita', 'ClientController@perpeka_berita');
+Route::get('/perpeka_regulasi', 'ClientController@perpeka_regulasi');
 

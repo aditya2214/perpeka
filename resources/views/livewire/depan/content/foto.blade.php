@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="card"  style="margin-top:10px;margin-bottom:10px;">
                 <div class="card-body text-center" style="border:1px solid; border-radius:10px;">
-                    <img loading="lazy" src="{{ url ('storage/'.$f->img) }}" style="width:100%; height:400px;" alt="">
+                    <img loading="lazy" src="{{ url ('storage/'.$f->file) }}" style="width:60%; height:30%;" alt="">
                     
                     <div class="text-center">
                         <small class="text-muted">Di Upload : {{$f->created_at}}</small>

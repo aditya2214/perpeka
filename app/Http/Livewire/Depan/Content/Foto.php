@@ -17,12 +17,12 @@ class Foto extends Component
     public function render()
     {
         return view('livewire.depan.content.foto',[
-            'foto' => DB::table('post')->where('kategori',1)->where('media_select',0)->orderBy('created_at','DESC')->paginate(9)
+            'foto' => DB::table('gallery')->where('media_select',0)->orderBy('created_at','DESC')->paginate(9)
         ]);
     }
 
     public function zoom($id){
-        $zoom = DB::table('post')->where('id',$id)->first();
+        $zoom = DB::table('gallery')->where('id',$id)->first();
         $this->img = $zoom->img;
         $this->desc = $zoom->description;
 

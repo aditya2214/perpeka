@@ -42,10 +42,10 @@
                 <li><a href="{{ url ('perpeka_visi_misi') }}" style="font-size:12px;">VISI/MISI</a></li>
                 <li><a href="{{ url ('perpeka_struktur_organisasi') }}" style="font-size:12px;">STRUKTUR ORGANISASI</a></li>
                 <li><a href="{{ url ('perpeka_kontak') }}" style="font-size:12px;">KONTAK</a></li>
-                <li><a href="#" style="font-size:12px;">REGULASI</a></li>
-                <li><a href="#" style="font-size:12px;">ARTIKEL</a></li>
+                <li><a href="{{ url ('perpeka_regulasi') }}" style="font-size:12px;">REGULASI</a></li>
+                <li><a href="{{ url ('perpeka_artikel') }}" style="font-size:12px;">ARTIKEL</a></li>
                 <li><a href="{{ url ('perpeka_foto') }}" style="font-size:12px;">FOTO</a></li>
-                <li><a href="#" style="font-size:12px;">BERITA</a></li>
+                <li><a href="{{ url ('perpeka_berita') }}" style="font-size:12px;">BERITA</a></li>
                 <li><a href="{{ url ('perpeka_data_statistik') }}" style="font-size:12px;">DATA STATISTIK</a></li>
             </ul>
         </div>

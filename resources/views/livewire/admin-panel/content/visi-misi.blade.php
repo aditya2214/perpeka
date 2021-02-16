@@ -91,14 +91,14 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <h4 for="exampleFormControlTextarea1">Visi </h4>
-                    <textarea wire:model="visi" class="form-control" id="" rows="3" style="height:200px;"></textarea>
+                    <textarea wire:model="visi" class="form-control" placeholder="Gunakan ( ; ) titik koma untuk paragraf baru." id="" rows="3" style="height:200px;"></textarea>
                     @error('visi') <span class="error text-danger">{{ $message }}</span> @enderror
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group">
                     <h4 for="exampleFormControlTextarea1" class="text-center">Misi </h4>
-                    <textarea wire:model="misi" class="form-control" id="" rows="3" style="height:200px;"></textarea>
+                    <textarea wire:model="misi" class="form-control" placeholder="Gunakan ( ; ) titik koma untuk paragraf baru." id="" rows="3" style="height:200px;"></textarea>
                     @error('misi') <span class="error text-danger ">{{ $message }}</span> @enderror
 
                 </div>        

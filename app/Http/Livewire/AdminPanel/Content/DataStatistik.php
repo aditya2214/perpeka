@@ -17,10 +17,13 @@ class DataStatistik extends Component
     public $pdf;
     public $updated;
     public $id_ds;
+    public $kategori;
+    public $select_table = 3;
     public function render()
     {
         return view('livewire.admin-panel.content.data-statistik',[
-            'PostDataStatistik'=>DB::table('post')->where('kategori',3)->paginate(4),
+            'kategoris' => DB::table('master_kategori')->get(),
+            'PostDataStatistik'=>DB::table('post')->where('kategori',$this->select_table)->paginate(4),
             'pdf'=>$this->pdf
         ]);
     }
@@ -29,6 +32,7 @@ class DataStatistik extends Component
         $this->title = null;
         $this->desc = null;
         $this->file = null;
+        $this->kategori=null;
     }
 
     public function storePost(){
@@ -42,7 +46,7 @@ class DataStatistik extends Component
             'title'=>$this->title,
             'description'=>$this->desc,
             'file'=>$this->file->store('pdf','public'),
-            'kategori'=>3,
+            'kategori'=>$this->kategori,
         ]);
 
         $this->resetInput();

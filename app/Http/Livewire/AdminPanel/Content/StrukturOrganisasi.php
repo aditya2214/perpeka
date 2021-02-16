@@ -13,7 +13,7 @@ class StrukturOrganisasi extends Component
     public function render()
     {
         return view('livewire.admin-panel.content.struktur-organisasi',[
-            'imgs'=>DB::table('post')->where('kategori',2)->orderBy('created_at','DESC')->first()
+            'imgs'=>DB::table('struktur_organisasi')->orderBy('created_at','DESC')->first()
         ]);
 
     }
@@ -25,8 +25,7 @@ class StrukturOrganisasi extends Component
 
         foreach ($this->img as $imgs) {
             $img = $imgs->store('img','public');
-            $upload_foto = DB::table('post')->insert([
-                'kategori'=>2,
+            $upload_foto = DB::table('struktur_organisasi')->insert([
                 'img'=>$img,
                 ]);
             }
@@ -37,6 +36,6 @@ class StrukturOrganisasi extends Component
     }
 
     public function delete_foto($id){
-        DB::table('post')->where('id',$id)->delete();
+        DB::table('struktur_organisasi')->where('id',$id)->delete();
     }
 }

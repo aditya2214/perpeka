@@ -27,33 +27,15 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
-                <span data-feather="layers"></span>
-                Regulasi
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
-                <span data-feather="layout"></span>
-                Artikel
-            </a>
-        </li>
-        <li class="nav-item">
         <a class="nav-link" href="{{ url ('upload_foto') }}">
             <span data-feather="upload"></span>
             Upload Foto/video
         </a>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              <span data-feather="video"></span>
-              Berita
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="{{ url ('data_statistik') }}">
               <span data-feather="trending-up"></span>
-              Data Statistik
+              Post
             </a>
           </li>
           
