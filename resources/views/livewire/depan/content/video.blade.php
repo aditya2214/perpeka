@@ -26,5 +26,6 @@
         {{$video -> links() }}
         @endforeach
     </div>
+    <br><br>
 </div>
 </div>

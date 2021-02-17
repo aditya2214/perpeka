@@ -12,12 +12,22 @@ class Berita extends Component
 
     use WithPagination;
     protected $paginationTheme = 'bootstrap';
+    public $pages=5;
+    public $asc_desc='DESC';
+    public $search;
 
     public function render()
     {
         return view('livewire.depan.content.berita',[
-            'berita' => DB::table('post')->where('kategori',4)->orderBy('created_at','DESC')->paginate(4)
-        ]);
+            'berita' => DB::table('post')
+            ->where('kategori',4)
+            ->where('title','like','%'.$this->search.'%')
+            ->where('description','like','%'.$this->search.'%')
+            ->orderBy('created_at',$this->asc_desc)
+            ->paginate($this->pages),
+            
+            'date' => date('d-M-Y')
+            ]);
     }
 
     public function ShowArtikel($id){

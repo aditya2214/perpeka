@@ -32,7 +32,7 @@
             </div>
         </div>
         <br>
-        <div class="row">
+        <!-- <div class="row">
             <div class="card" style="width:100%;">
                 <div class="card-header" style="background-color:#2459ad;color: white;">
                     3 Histori Terbaru
@@ -42,7 +42,7 @@
                     
                 </div>
             </div>
-        </div>
+        </div> -->
     
         <div class="row">
             <div class="card" style="width:100%;">
